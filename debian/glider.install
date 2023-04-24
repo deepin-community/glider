@@ -1,0 +1,3 @@
+etc/glider/glider.conf.example
+usr/bin/glider
+usr/lib/systemd/system/glider@.service

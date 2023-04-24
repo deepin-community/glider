@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+DESTDIR=$(CURDIR)/debian/tmp
+GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external"
+export CGO_LDFLAGS="$(LDFLAGS)"
+#export CGO_CFLAGS="$(CFLAGS)"
+#export CGO_CPPFLAGS="$(CPPFLAGS)"
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	GOROOT=/usr/lib/go-1.20/ PATH=/usr/lib/go-1.20/bin:$(PATH) go build -o glider .
+
+override_dh_auto_clean:
+	dh_clean
+	rm glider
+
+override_dh_installdocs:
+	echo "skip"
+
+override_dh_auto_install:
+	install -Dm755 glider $(DESTDIR)/usr/bin/glider
+	install -Dm644 config/glider.conf.example $(DESTDIR)/etc/glider/glider.conf.example
+	install -Dm644 systemd/glider@.service $(DESTDIR)/usr/lib/systemd/system/glider@.service
+
+override_dh_dwz:
+	echo "skip"
