@@ -14,7 +14,7 @@ override_dh_auto_build:
 
 override_dh_auto_clean:
 	dh_clean
-	rm glider
+	rm -f glider
 
 override_dh_installdocs:
 	echo "skip"
