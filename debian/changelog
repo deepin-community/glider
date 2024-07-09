@@ -1,3 +1,10 @@
+glider (0.16.2-1deepin) unstable; urgency=medium
+
+  * Fix build failure.
+  * setting local build. 
+
+ -- Gui-Yue <yuemeng.gui@gmail.com>  Tue, 09 Jul 2024 12:58:56 +0800
+
 glider (0.16.2-1) unstable; urgency=medium
 
   * Init release

@@ -10,11 +10,12 @@ export CGO_LDFLAGS="$(LDFLAGS)"
 	dh $@
 
 override_dh_auto_build:
-	GOROOT=/usr/lib/go-1.20/ PATH=/usr/lib/go-1.20/bin:$(PATH) go build -o glider .
+	export GOPROXY=off
+	GOPATH=$(CURDIR)/debian/dep go build -o glider .
 
 override_dh_auto_clean:
 	dh_clean
-	rm glider
+	rm -f glider
 
 override_dh_installdocs:
 	echo "skip"
