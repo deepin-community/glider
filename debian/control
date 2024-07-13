@@ -2,13 +2,23 @@ Source: glider
 Maintainer: Deepin Packages Builder <packages@deepin.org>
 Section: devel
 Priority: optional
-Build-Depends: golang,
-               debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-golang,
+               golang-any,
+               golang-github-aead-chacha20-dev,
+               golang-github-insomniacslk-dhcp-dev,
+               golang-github-xtaci-kcp-dev,
+               golang-github-dgryski-go-camellia-dev,
+               golang-github-dgryski-go-idea-dev,
+               golang-github-dgryski-go-rc2-dev,
+               conflag,
+               golang-github-nadoo-ipset-dev
+
+
 Standards-Version: 4.5.0
 Vcs-Browser: https://github.com/deepin-community/glider.git
 Vcs-Git: https://github.com/deepin-community/glider.git
 Homepage: https://github.com/nadoo/glider
-
 Package: glider
 Architecture: any
 Depends: ${shlibs:Depends},

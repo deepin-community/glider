@@ -1,0 +1,105 @@
+--- /dev/null
++++ b/vendor/modules.txt
+@@ -0,0 +1,102 @@
++# github.com/aead/chacha20 v0.0.0-20180709150244-8b13a72661da
++## explicit
++github.com/aead/chacha20
++github.com/aead/chacha20/chacha
++# github.com/dgryski/go-camellia v0.0.0-20191119043421-69a8a13fb23d
++## explicit
++github.com/dgryski/go-camellia
++# github.com/dgryski/go-idea v0.0.0-20170306091226-d2fb45a411fb
++## explicit
++github.com/dgryski/go-idea
++# github.com/dgryski/go-rc2 v0.0.0-20150621095337-8a9021637152
++## explicit
++github.com/dgryski/go-rc2
++# github.com/ebfe/rc2 v0.0.0-20131011165748-24b9757f5521
++## explicit
++# github.com/insomniacslk/dhcp v0.0.0-20230307103557-e252950ab961
++## explicit; go 1.18
++github.com/insomniacslk/dhcp/dhcpv4
++github.com/insomniacslk/dhcp/dhcpv4/server4
++github.com/insomniacslk/dhcp/iana
++github.com/insomniacslk/dhcp/interfaces
++github.com/insomniacslk/dhcp/rfc1035label
++# github.com/josharian/native v1.1.0
++## explicit; go 1.13
++github.com/josharian/native
++# github.com/klauspost/cpuid/v2 v2.2.4
++## explicit; go 1.15
++github.com/klauspost/cpuid/v2
++# github.com/klauspost/reedsolomon v1.11.7
++## explicit; go 1.17
++github.com/klauspost/reedsolomon
++# github.com/mdlayher/ethernet v0.0.0-20220221185849-529eae5b6118
++## explicit; go 1.12
++# github.com/mdlayher/raw v0.1.0
++## explicit; go 1.17
++# github.com/nadoo/conflag v0.3.1
++## explicit; go 1.13
++github.com/nadoo/conflag
++# github.com/nadoo/ipset v0.5.0
++## explicit; go 1.18
++github.com/nadoo/ipset
++github.com/nadoo/ipset/internal/netlink
++# github.com/pierrec/lz4/v4 v4.1.17
++## explicit; go 1.14
++github.com/pierrec/lz4/v4
++github.com/pierrec/lz4/v4/internal/lz4block
++github.com/pierrec/lz4/v4/internal/lz4errors
++github.com/pierrec/lz4/v4/internal/lz4stream
++github.com/pierrec/lz4/v4/internal/xxh32
++# github.com/pkg/errors v0.9.1
++## explicit
++github.com/pkg/errors
++# github.com/templexxx/cpu v0.1.0
++## explicit
++github.com/templexxx/cpu
++# github.com/templexxx/xorsimd v0.4.2
++## explicit; go 1.13
++github.com/templexxx/xorsimd
++# github.com/tjfoc/gmsm v1.4.1
++## explicit; go 1.14
++github.com/tjfoc/gmsm/sm4
++# github.com/u-root/uio v0.0.0-20230305220412-3e8cd9d6bf63
++## explicit; go 1.16
++github.com/u-root/uio/rand
++github.com/u-root/uio/uio
++# github.com/xtaci/kcp-go/v5 v5.6.2
++## explicit; go 1.13
++github.com/xtaci/kcp-go/v5
++# golang.org/x/crypto v0.7.0
++## explicit; go 1.17
++golang.org/x/crypto/blowfish
++golang.org/x/crypto/cast5
++golang.org/x/crypto/chacha20
++golang.org/x/crypto/chacha20poly1305
++golang.org/x/crypto/curve25519
++golang.org/x/crypto/curve25519/internal/field
++golang.org/x/crypto/ed25519
++golang.org/x/crypto/hkdf
++golang.org/x/crypto/internal/alias
++golang.org/x/crypto/internal/poly1305
++golang.org/x/crypto/pbkdf2
++golang.org/x/crypto/salsa20
++golang.org/x/crypto/salsa20/salsa
++golang.org/x/crypto/sha3
++golang.org/x/crypto/ssh
++golang.org/x/crypto/ssh/internal/bcrypt_pbkdf
++golang.org/x/crypto/tea
++golang.org/x/crypto/twofish
++golang.org/x/crypto/xtea
++# golang.org/x/net v0.8.0
++## explicit; go 1.17
++golang.org/x/net/bpf
++golang.org/x/net/internal/iana
++golang.org/x/net/internal/socket
++golang.org/x/net/ipv4
++golang.org/x/net/ipv6
++# golang.org/x/sys v0.6.0
++## explicit; go 1.17
++golang.org/x/sys/cpu
++golang.org/x/sys/internal/unsafeheader
++golang.org/x/sys/unix
++golang.org/x/sys/windows
