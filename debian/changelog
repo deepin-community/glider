@@ -1,4 +1,4 @@
-glider (0.16.2-1deepin) unstable; urgency=medium
+glider (0.16.2-1deepin1) unstable; urgency=medium
 
   * Fix build failure.
   * setting local build. 

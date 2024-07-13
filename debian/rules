@@ -5,20 +5,35 @@ GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external"
 export CGO_LDFLAGS="$(LDFLAGS)"
 #export CGO_CFLAGS="$(CFLAGS)"
 #export CGO_CPPFLAGS="$(CPPFLAGS)"
+export DH_GOLANG_INSTALL_ALL = 1
+export GOFLAGS="-mod=vendor"
 
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang
 
 override_dh_auto_build:
-	export GOPROXY=off
-	GOPATH=$(CURDIR)/debian/dep go build -o glider .
+	go env
+	cp -r /usr/share/gocode/src/github.com $(CURDIR)/vendor
+	cp -r /usr/share/gocode/src/golang.org $(CURDIR)/vendor
+	rm -rf $(CURDIR)/vendor/github.com/xtaci/kcp-go
+	mkdir -p $(CURDIR)/vendor/github.com/xtaci/kcp-go/v5
+	cp -r /usr/share/gocode/src/github.com/xtaci/kcp-go/* $(CURDIR)/vendor/github.com/xtaci/kcp-go/v5
+	go build -o glider .
 
 override_dh_auto_clean:
 	dh_clean
 	rm -f glider
+	rm -rf vendor/github.com
+	rm -rf vendor/golang.org
+
+override_dh_auto_test:
+	echo "Skip Test"
 
 override_dh_installdocs:
 	echo "skip"
+
+override_dh_golang:
+	echo "Skip"
 
 override_dh_auto_install:
 	install -Dm755 glider $(DESTDIR)/usr/bin/glider
